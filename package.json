@@ -1,0 +1,28 @@
+{
+  "name": "lambda-scraper",
+  "description": "Example scraper using puppeteer and aws lambda",
+  "author": "Alex Crooks",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec 'serverless offline start --port 3001 --stage dev' -e 'js'",
+    "deploy:dev": "npm run test && serverless deploy --stage dev --aws-profile alex",
+    "test": "standard && eslint ."
+  },
+  "dependencies": {
+    "chrome-aws-lambda": "^1.14.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.1",
+    "puppeteer-core": "^1.14.0",
+    "serverless-http": "^1.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "nodemon": "^1.18.11",
+    "serverless": "^1.40.0",
+    "serverless-offline": "^4.9.4",
+    "standard": "^12.0.1"
+  }
+}
