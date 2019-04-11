@@ -21,6 +21,7 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "nodemon": "^1.18.11",
+    "puppeteer": "^1.14.0",
     "serverless": "^1.40.0",
     "serverless-offline": "^4.9.4",
     "standard": "^12.0.1"

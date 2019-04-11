@@ -1,6 +1,6 @@
 const responses = require('../../lib/responses')
 const chromium = require('chrome-aws-lambda')
-const puppeteer = require('puppeteer-core')
+const puppeteer = chromium.puppeteer
 
 const apiFunction = async (request, response) => {
   let requestedUrl = request.query.url
@@ -35,6 +35,8 @@ const apiFunction = async (request, response) => {
       await browser.close()
     }
   }
+
+  console.log({ pageTitle })
 
   return responses.success(response, { pageTitle })
 }
